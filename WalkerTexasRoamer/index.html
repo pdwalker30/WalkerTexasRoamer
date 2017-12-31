@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel=icon href=favicon.ico sizes="16x16" type="image/png">
+    <title>N.Vitek</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/academicons.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS and JS (Bootstrap) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="./Scripts/shim.min.js"></script>
+    <script src="./Scripts/zone.js"></script>
+    <script src="./Scripts/system.src.js"></script>
+
+    <script src="system.config.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script>
+        System.import('app').catch(function (err) { console.error(err); });
+
+        document.addEventListener("appReady", handleAppReady);
+
+        function handleAppReady(event) {
+            var preBootstrapContainer = document.getElementById("pre-bootstrap-container");
+            var preBoostrap = document.getElementById("pre-bootstrap");
+            preBoostrap.className = "loaded";
+
+            setTimeout(
+                function removeLoadingSpinner() {
+                    preBootstrapContainer.parentNode.removeChild(preBootstrapContainer);
+                }, 250
+            );
+        }
+
+    </script>
+
+    <base href="/" />
+</head>
+<body>
+    <my-app></my-app>
+
+    <div id="pre-bootstrap-container">
+
+        <style type="text/css">
+            #pre-bootstrap {
+                background-color: #E6E9ED;
+                bottom: 0px;
+                left: 0px;
+                opacity: 1.0;
+                position: fixed;
+                right: 0px;
+                top: 0px;
+                -webkit-transition: all linear 400ms;
+                transition: all linear 400ms;
+                z-index: 999999;
+            }
+
+                #pre-bootstrap.loaded {
+                    opacity: 0.0;
+                }
+
+            .busyloader {
+                position: absolute;
+                top: 30%;
+                font-size: 10px;
+                margin: 50px auto;
+                text-indent: -9999em;
+                width: 11em;
+                height: 11em;
+                border-radius: 50%;
+                background: #ffffff;
+                background: -moz-linear-gradient(left, #7ce5f1 10%, rgba(255, 255, 255, 0) 42%);
+                background: -webkit-linear-gradient(left, #7ce5f1 10%, rgba(255, 255, 255, 0) 42%);
+                background: -o-linear-gradient(left, #7ce5f1 10%, rgba(255, 255, 255, 0) 42%);
+                background: -ms-linear-gradient(left, #7ce5f1 10%, rgba(255, 255, 255, 0) 42%);
+                background: linear-gradient(to right, #7ce5f1 10%, rgba(255, 255, 255, 0) 42%);
+                position: relative;
+                -webkit-animation: load3 1.4s infinite linear;
+                animation: load3 1.4s infinite linear;
+                -webkit-transform: translateZ(0);
+                -ms-transform: translateZ(0);
+                transform: translateZ(0);
+            }
+
+                .busyloader:before {
+                    width: 50%;
+                    height: 50%;
+                    background: #7ce5f1;
+                    border-radius: 100% 0 0 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: '';
+                }
+
+                .busyloader:after {
+                    background-color: #f3f3f3;
+                    width: 75%;
+                    height: 75%;
+                    border-radius: 50%;
+                    content: '';
+                    margin: auto;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                }
+
+            @-webkit-keyframes load3 {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes load3 {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+
+        <div id="pre-bootstrap">
+            <div class="busyloader"></div>
+        </div>
+
+
+    </div>
+</body>
+</html>
