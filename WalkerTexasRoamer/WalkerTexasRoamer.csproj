@@ -27,6 +27,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -249,6 +250,15 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.component.css">
+      <DependentUpon>app.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\app.component.html" />
+    <Content Include="app\app.component.min.css">
+      <DependentUpon>app.component.css</DependentUpon>
+    </Content>
+    <Content Include="app\home\home.component.html" />
+    <Content Include="app\navbar\navbar.component.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\bootstrap.css" />
@@ -317,10 +327,24 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="package.json" />
+    <Content Include="app\app.component.scss" />
+    <Content Include="app\home\home.component.scss" />
+    <Content Include="app\navbar\navbar.component.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Project_Readme.html" />
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\app.component.ts" />
+    <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\app.routes.ts" />
+    <TypeScriptCompile Include="app\home\home.component.ts" />
+    <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\navbar\navbar.component.ts" />
+    <TypeScriptCompile Include="app\utilities\event-dispatcher.service.ts" />
     <TypeScriptCompile Include="system.config.ts" />
   </ItemGroup>
   <ItemGroup>
