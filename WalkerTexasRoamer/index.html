@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <link rel=icon href=favicon.ico sizes="32x32" type="image/png">
+    <link rel=icon href=favicon.ico sizes="16x16" type="image/png">
     <title>Walker Texas Roamer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/academicons.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    
 
     <!--JQUERY-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -32,6 +32,7 @@
         document.addEventListener("appReady", handleAppReady);
 
         function handleAppReady(event) {
+            console.log('appReady triggered');
             var preBootstrapContainer = document.getElementById("pre-bootstrap-container");
             var preBoostrap = document.getElementById("pre-bootstrap");
             preBoostrap.className = "loaded";
@@ -44,11 +45,10 @@
         }
 
     </script>
-
     <base href="/" />
 </head>
 <body>
-    <my-app></my-app>
+    <app-root></app-root>
 
     <div id="pre-bootstrap-container">
 
@@ -68,6 +68,7 @@
 
                 #pre-bootstrap.loaded {
                     opacity: 0.0;
+                    transition: opacity 0.25s;
                 }
 
             .busyloader {
