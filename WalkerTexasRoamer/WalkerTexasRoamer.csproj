@@ -249,6 +249,12 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.component.css">
+      <DependentUpon>app.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\app.component.min.css">
+      <DependentUpon>app.component.css</DependentUpon>
+    </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\bootstrap.css" />
@@ -311,6 +317,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\common\" />
+    <Folder Include="app\home\" />
+    <Folder Include="app\navbar\" />
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
@@ -339,6 +348,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\app.routes.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\utilities\event-dispatcher.service.ts" />
     <TypeScriptCompile Include="system.config.ts" />
