@@ -27,6 +27,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -252,22 +253,22 @@
     <Content Include="app\app.component.css">
       <DependentUpon>app.component.scss</DependentUpon>
     </Content>
+    <Content Include="app\app.component.html" />
     <Content Include="app\app.component.min.css">
       <DependentUpon>app.component.css</DependentUpon>
     </Content>
+    <Content Include="app\blog\blog.component.html" />
+    <Content Include="app\home\home.component.html" />
+    <Content Include="app\map\map.component.html" />
+    <Content Include="app\navbar\navbar.component.html" />
+    <Content Include="app\pictures\pictures.component.html" />
+    <Content Include="app\ratings\ratings.component.html" />
+    <Content Include="app\videos\videos.component.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="css\font-awesome.css" />
-    <Content Include="css\font-awesome.min.css" />
-    <Content Include="css\styles.css">
-      <DependentUpon>styles.scss</DependentUpon>
-    </Content>
-    <Content Include="css\styles.min.css">
-      <DependentUpon>styles.css</DependentUpon>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -318,8 +319,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\common\" />
-    <Folder Include="app\home\" />
-    <Folder Include="app\navbar\" />
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
@@ -334,10 +333,14 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="package.json" />
-    <Content Include="app\app.component.html" />
     <Content Include="app\app.component.scss" />
-    <Content Include="css\_variables.scss" />
-    <Content Include="css\styles.scss" />
+    <Content Include="app\home\home.component.scss" />
+    <Content Include="app\navbar\navbar.component.scss" />
+    <Content Include="app\blog\blog.component.scss" />
+    <Content Include="app\map\map.component.scss" />
+    <Content Include="app\pictures\pictures.component.scss" />
+    <Content Include="app\ratings\ratings.component.scss" />
+    <Content Include="app\videos\videos.component.scss" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -349,8 +352,15 @@
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\app.routes.ts" />
+    <TypeScriptCompile Include="app\blog\blog.component.ts" />
+    <TypeScriptCompile Include="app\home\home.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\map\map.component.ts" />
+    <TypeScriptCompile Include="app\navbar\navbar.component.ts" />
+    <TypeScriptCompile Include="app\pictures\pictures.component.ts" />
+    <TypeScriptCompile Include="app\ratings\ratings.component.ts" />
     <TypeScriptCompile Include="app\utilities\event-dispatcher.service.ts" />
+    <TypeScriptCompile Include="app\videos\videos.component.ts" />
     <TypeScriptCompile Include="system.config.ts" />
   </ItemGroup>
   <ItemGroup>

@@ -13,7 +13,7 @@ export class EventDispatcherService {
     }
 
     public dispatchEvent(paramEventType: string): void {
-        console.log(`EventDispatcherService dispatching:[${paramEventType}]`);
+        console.log(`EventDispatcherService dispatching: [${ paramEventType }]`);
         let bubbling: boolean = true;
         let cancelable: boolean = false;
 

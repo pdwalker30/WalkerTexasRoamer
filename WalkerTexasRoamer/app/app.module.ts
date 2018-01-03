@@ -1,10 +1,15 @@
 ﻿import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+//component
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
+//service
 import { EventDispatcherService } from './utilities/event-dispatcher.service';
+
+//routes
+import {routingComponents, PrimaryAppRoutingModule } from './app.routes';
 
 
 
@@ -13,7 +18,9 @@ import { EventDispatcherService } from './utilities/event-dispatcher.service';
 
     //Components
     declarations: [
-        AppComponent
+        AppComponent,
+        routingComponents,
+        NavbarComponent
     ],
 
     //Services
@@ -23,8 +30,9 @@ import { EventDispatcherService } from './utilities/event-dispatcher.service';
 
     //External Modules
     imports: [
-        BrowserModule
+        BrowserModule,
+        PrimaryAppRoutingModule,
     ]
 })
-export class AppModule {   
+export class AppModule {
 }

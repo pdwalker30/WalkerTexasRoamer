@@ -1,19 +1,18 @@
 ﻿import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {HomeComponent } from './home/home.component';
 
 //WalkerTexasRoamer/test/coolThing1
 
 const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'home' },
-    { path: 'home', component: HomeLayoutComponent }, 
-    { path: 'test', loadChildren: './app/some_module_here/my-new.module' }   
+    { path: 'home', component: HomeComponent },
     { path: '**', redirectTo: 'home' }
- ];
-
-export const routingComponents = [
-    FirstComponent, SecondComponent, ThirdComponent
 ];
 
+export const routingComponents = [
+   HomeComponent
+];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
