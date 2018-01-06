@@ -20,7 +20,7 @@ var EventDispatcherService = (function () {
         this._document = document;
     }
     EventDispatcherService.prototype.dispatchEvent = function (paramEventType) {
-        console.log("EventDispatcherService dispatching:[" + paramEventType + "]");
+        console.log("EventDispatcherService dispatching: [" + paramEventType + "]");
         var bubbling = true;
         var cancelable = false;
         this._document.dispatchEvent(this.createEvent(paramEventType, bubbling, cancelable));

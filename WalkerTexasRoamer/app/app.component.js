@@ -14,7 +14,8 @@ var event_dispatcher_service_1 = require("./utilities/event-dispatcher.service")
 var AppComponent = (function () {
     function AppComponent(evenDispatcherSVC) {
         this.CLASS_NAME = 'AppComponenet';
-        this.title = 'Walker Texas Roamer';
+        //Public
+        this.title = 'Adam has a title';
         console.log(this.CLASS_NAME + ".ctor");
         this.eventService = evenDispatcherSVC;
     }

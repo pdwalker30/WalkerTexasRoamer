@@ -258,7 +258,13 @@
       <DependentUpon>app.component.css</DependentUpon>
     </Content>
     <Content Include="app\blog\blog.component.html" />
+    <Content Include="app\home\home.component.css">
+      <DependentUpon>home.component.scss</DependentUpon>
+    </Content>
     <Content Include="app\home\home.component.html" />
+    <Content Include="app\home\home.component.min.css">
+      <DependentUpon>home.component.css</DependentUpon>
+    </Content>
     <Content Include="app\map\map.component.html" />
     <Content Include="app\navbar\navbar.component.html" />
     <Content Include="app\pictures\pictures.component.html" />
@@ -268,7 +274,20 @@
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\Site.css">
+      <DependentUpon>Site.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.min.css">
+      <DependentUpon>Site.css</DependentUpon>
+    </Content>
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\styles.css">
+      <DependentUpon>styles.scss</DependentUpon>
+    </Content>
+    <Content Include="css\styles.min.css">
+      <DependentUpon>styles.css</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -320,6 +339,7 @@
   <ItemGroup>
     <Folder Include="app\common\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Assets\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
@@ -345,6 +365,9 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="Content\Site.scss" />
+    <Content Include="css\styles.scss" />
+    <Content Include="css\_variables.scss" />
     <None Include="Project_Readme.html" />
     <Content Include="tsconfig.json" />
   </ItemGroup>
@@ -353,14 +376,25 @@
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\app.routes.ts" />
     <TypeScriptCompile Include="app\blog\blog.component.ts" />
+    <TypeScriptCompile Include="app\blog\blog.module.ts" />
+    <TypeScriptCompile Include="app\blog\blog.service.ts" />
     <TypeScriptCompile Include="app\home\home.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\map\map.component.ts" />
+    <TypeScriptCompile Include="app\map\map.module.ts" />
+    <TypeScriptCompile Include="app\map\map.service.ts" />
     <TypeScriptCompile Include="app\navbar\navbar.component.ts" />
     <TypeScriptCompile Include="app\pictures\pictures.component.ts" />
+    <TypeScriptCompile Include="app\pictures\pictures.module.ts" />
+    <TypeScriptCompile Include="app\pictures\pictures.service.ts" />
     <TypeScriptCompile Include="app\ratings\ratings.component.ts" />
+    <TypeScriptCompile Include="app\ratings\ratings.module.ts" />
+    <TypeScriptCompile Include="app\ratings\ratings.service.ts" />
     <TypeScriptCompile Include="app\utilities\event-dispatcher.service.ts" />
+    <TypeScriptCompile Include="app\utilities\wtr-constants.ts" />
     <TypeScriptCompile Include="app\videos\videos.component.ts" />
+    <TypeScriptCompile Include="app\videos\videos.module.ts" />
+    <TypeScriptCompile Include="app\videos\videos.service.ts" />
     <TypeScriptCompile Include="system.config.ts" />
   </ItemGroup>
   <ItemGroup>

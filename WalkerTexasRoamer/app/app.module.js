@@ -8,8 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
+//component
 var app_component_1 = require("./app.component");
+var navbar_component_1 = require("./navbar/navbar.component");
+//service
 var event_dispatcher_service_1 = require("./utilities/event-dispatcher.service");
+//routes
+var app_routes_1 = require("./app.routes");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -20,7 +25,9 @@ AppModule = __decorate([
         bootstrap: [app_component_1.AppComponent],
         //Components
         declarations: [
-            app_component_1.AppComponent
+            app_component_1.AppComponent,
+            app_routes_1.routingComponents,
+            navbar_component_1.NavbarComponent
         ],
         //Services
         providers: [
@@ -28,7 +35,8 @@ AppModule = __decorate([
         ],
         //External Modules
         imports: [
-            platform_browser_1.BrowserModule
+            platform_browser_1.BrowserModule,
+            app_routes_1.PrimaryAppRoutingModule,
         ]
     })
 ], AppModule);
